@@ -43,6 +43,7 @@
                 <p class="text-center text-white mb-0 px-4 small">
                     Copyright &copy; <b>2018</b> All rights reserved. <a rel="nofollow noopener" href="{{ url( '/' ) }}" class="tm-footer-link">{{ config('app.name', 'Laravel') }}</a>
                 </p>
+                <h4 class="text-center text-info mb-0 px-4"><b>Support available from 8:00am till 21:00pm everyday, holidays included</b></h4>
             </div>
         </footer>
 
