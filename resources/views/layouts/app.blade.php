@@ -32,7 +32,8 @@
                 
                 <!-- row -->
                 <div class="row tm-content-row">
-                     @yield('content')
+                    @include('flash::message')
+                    @yield('content')
                 </div>
             </div>
 
@@ -47,6 +48,8 @@
             </div>
         </footer>
 
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script> $('#flash-overlay-modal').modal() ; </script>
+        @yield('js')
     </body>
 </html>
