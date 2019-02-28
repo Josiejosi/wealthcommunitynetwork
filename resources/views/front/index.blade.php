@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <h5>Welcome to {{ config('app.name', 'Laravel') }}</h5>
             <p>
-                <b>🎇Keeper system here you pay 15% to your upliner then u will pay 35% in 2 to 72 hours then keep your 50% u will pay before gh 20% recommit fororo khohlwa u won't get a link before you ph</b>.
+                <b>🎇Keeper system here you pay 15% to your upliner then you will pay 35% in 2 to 72 hours then keep your 50% you will pay before you gh. 20% recommit fororo khohlwa you won't get a link before you ph</b>.
             </p>
             <h5><b>💎 minimum R 500 maximum R 20000💎</b></h5>
             <ul>
@@ -55,13 +55,6 @@
                             <td>
                                 <div class="tm-status-circle moving">
                                 </div>15 days
-                            </td>
-                            <td><b>50%</b></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="tm-status-circle moving">
-                                </div>7 days
                             </td>
                             <td><b>75%</b></td>
                         </tr>
