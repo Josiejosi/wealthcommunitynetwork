@@ -13,6 +13,9 @@ class Order extends Model
         'status', //0 = not allocated, 1 = allocated, 2 = reserved for payment, 3 = payment received.
         'amount', 
         'user_id', 
+        'type', 
+        'days', 
+        'percentage', 
         'sender_id', 
         'matures_at', 
         'expires_at',
