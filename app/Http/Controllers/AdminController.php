@@ -13,7 +13,7 @@ class AdminController extends Controller
 
     public function users()  {
 
-    	return view( 'admin.users', [ 'users' => User::all() ] ) ;
+    	return view( 'admin.users', [ 'users' => User::where( 'role', 1 )->get() ] ) ;
 
     }
 
@@ -66,7 +66,7 @@ class AdminController extends Controller
 
     	return view( 'admin.block', [ 
 
-    		'users' 					=> User::where( 'role', 1 )->get(),
+    		'users' 					=> User::where( 'role', 1 )->where('blocked', 0)->get(),
 
     	] ) ;
 

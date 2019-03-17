@@ -9,6 +9,21 @@
 
                     <div class="card-body">
 
+                        <table class="table table-inverse">
+                            <thead>
+                                <tr>
+                                    <th>Incoming transactions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>Nothing yet</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
                     </div>
 
                 </div>
