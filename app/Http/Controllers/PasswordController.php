@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class OutgoingController extends Controller
+class PasswordController extends Controller
 {
     public function __construct() {
 
@@ -15,7 +15,7 @@ class OutgoingController extends Controller
 
     public function index()  {
 
-        return view( 'outgoing' ) ;
+        return view( 'password' ) ;
 
     }
 }

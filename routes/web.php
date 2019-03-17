@@ -25,6 +25,7 @@ Auth::routes( ['register' => false] ) ;
 Route::get('/home', 'HomeController@index')->name('home') ;
 Route::get('/join/{upliner_id}', 'JoinController@index')->name('join') ;
 Route::post('/join', 'JoinController@store')->name('join') ;
+Route::get('/create/order', 'OrderController@index')->name('create_order') ;
 
 Route::post('/ph', 'PHController@store')->name('ph') ;
 Route::get('/cash_deposited/{id}', 'PHController@cash_deposited')->name('cash_deposited') ;
@@ -34,5 +35,13 @@ Route::get('/cash_received/{id}', 'PHController@cash_received')->name('cash_rece
 Route::get('/admin_allocation', 'AdminController@admin_allocation')->name('admin_allocation') ;
 Route::post('/admin_allocation', 'AdminController@post_admin_allocation')->name('post_admin_allocation') ;
 Route::get('/member_allocation', 'AdminController@member_allocation')->name('member_allocation') ;
+Route::post('/member_allocation', 'AdminController@member_allocation')->name('post_member_allocation') ;
 Route::get('/users', 'AdminController@users')->name('users') ;
 Route::get('/orders', 'AdminController@orders')->name('orders') ;
+Route::get('/block', 'AdminController@block')->name('block') ;
+
+Route::get('/password', 'PasswordController@index')->name('password') ;
+Route::get('/profile', 'ProfileController@index')->name('profile') ;
+Route::get('/account', 'AccountController@index')->name('account') ;
+Route::get('/incoming', 'IncomingController@index')->name('incoming') ;
+Route::get('/outgoing', 'OutgoingController@index')->name('outgoing') ;

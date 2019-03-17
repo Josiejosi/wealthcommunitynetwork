@@ -100,6 +100,12 @@
                             </li>
 
                             <li class="nav-item">
+                                <a class="nav-link {{ ( Route::currentRouteName() === "account" ) ? 'active' : '' }}" href="{{ url( '/account' ) }}">
+                                    <i class="fa fa-lock" aria-hidden="true"></i> Account
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a class="nav-link {{ ( Route::currentRouteName() === "profile" ) ? 'active' : '' }}" href="{{ url( '/profile' ) }}">
                                     <i class="fa fa-user" aria-hidden="true"></i> Profile
                                 </a>

@@ -5,34 +5,34 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Admin Allocations</div>
+                    <div class="card-header">Member Allocations</div>
 
                     <div class="card-body">
 
 
                         <div class="row">
                             <div class="col-12 text-center">
-                                <h2 class="tm-block-title mb-4">Allocating Admins</h2>
+                                <h2 class="tm-block-title mb-4">Allocating Members</h2>
                             </div>
                         </div>
 
-                        <form method="POST" action="{{ route('post_admin_allocation') }}">
+                        <form method="POST" action="{{ route('post_member_allocation') }}">
                             @csrf
 
                             <div class="form-group row">
-                                <label for="admin" class="col-md-4 col-form-label text-md-right">{{ __('Admin') }}</label>
+                                <label for="member" class="col-md-4 col-form-label text-md-right">{{ __('Member') }}</label>
 
                                 <div class="col-md-6">
                                     <select 
-                                        class="form-control {{ $errors->has('admin') ? ' is-invalid' : '' }}" 
-                                        name="admin" required autofocus>
-                                        @foreach( $admins as $admin )
-                                            <option value="{{ $admin->id }}">{{ $admin->name }}</option>
+                                        class="form-control {{ $errors->has('member') ? ' is-invalid' : '' }}" 
+                                        name="member" required autofocus>
+                                        @foreach( $members as $member )
+                                            <option value="{{ $member->id }}">{{ $member->name }}</option>
                                         @endforeach
                                     </select> 
-                                    @if ($errors->has('admin'))
+                                    @if ($errors->has('member'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('admin') }}</strong>
+                                            <strong>{{ $errors->first('member') }}</strong>
                                         </span>
                                     @endif
                                 </div>

@@ -53,10 +53,20 @@ class AdminController extends Controller
 
     public function member_allocation()  {
 
-    	return view( 'admin.member_allocation', [ 
+        return view( 'admin.member_allocation', [ 
 
-    		'orders' 					=> Order::where('status', 0)->get(), 
-    		'members' 					=> User::where( 'role', 1 )->get(),
+            'orders'                    => Order::where('status', 0)->get(), 
+            'members'                   => User::where( 'role', 1 )->get(),
+
+        ] ) ;
+
+    }
+
+    public function block()  {
+
+    	return view( 'admin.block', [ 
+
+    		'users' 					=> User::where( 'role', 1 )->get(),
 
     	] ) ;
 
