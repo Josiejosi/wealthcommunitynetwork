@@ -106,12 +106,6 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link {{ ( Route::currentRouteName() === "profile" ) ? 'active' : '' }}" href="{{ url( '/profile' ) }}">
-                                    <i class="fa fa-user" aria-hidden="true"></i> Profile
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
 
                                 <a class="nav-link" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
