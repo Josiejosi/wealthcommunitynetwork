@@ -42,7 +42,7 @@ Route::get('/block', 'AdminController@block')->name('block') ;
 
 Route::get('/password', 'PasswordController@index')->name('password') ;
 Route::post('/password', 'PasswordController@update')->name('password') ;
-Route::get('/profile', 'ProfileController@index')->name('profile') ;
 Route::get('/account', 'AccountController@index')->name('account') ;
+Route::post('/account', 'AccountController@update')->name('account') ;
 Route::get('/incoming', 'IncomingController@index')->name('incoming') ;
 Route::get('/outgoing', 'OutgoingController@index')->name('outgoing') ;

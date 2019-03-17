@@ -27,30 +27,30 @@ class JoinController extends Controller
     public function store( Request $request ) {
 
     	$this->validate( $request, [
-    		'username' 						=> 'required|unique:users|min:6',
-    		'email' 						=> 'required',
-    		'phone' 						=> 'required|unique:users',
-    		'name' 							=> 'required',
+    		'username' 						       => 'required|unique:users|min:6',
+    		'email' 						        => 'required',
+    		'phone' 						        => 'required|unique:users',
+    		'name' 							        => 'required',
     		'password'              		=> 'required|string|min:6|confirmed',
 
-    		'bank' 							=> 'required',
-    		'account_number' 				=> 'required|unique:accounts',
-    		'account_type' 					=> 'required',
+    		'bank' 							        => 'required',
+    		'account_number' 				     => 'required|unique:accounts',
+    		'account_type' 					    => 'required',
     	]) ;
 
-    	$upliner 							= $request->upliner_id ;
+    	$upliner 							         = $request->upliner_id ;
     	
 
-        $user 								= User::create([
+        $user 								      = User::create([
 
-        	'name' 							=> $request->name , 
-        	'email' 						=> $request->email , 
-        	'password' 						=> Hash::make( $request->password ) , 
-        	'role' 							=> 1, 
-        	'phone' 						=> $request->phone, 
-        	'username' 						=> $request->username, 
-        	'active' 						=> 1, 
-        	'blocked' 						=> 0,
+        	'name' 							       => $request->name , 
+        	'email' 						       => $request->email , 
+        	'password' 						      => Hash::make( $request->password ) , 
+        	'role' 							       => 1, 
+        	'phone' 						       => $request->phone, 
+        	'username' 						      => $request->username, 
+        	'active' 						        => 1, 
+        	'blocked' 						     => 0,
 
         ]) ;
 
