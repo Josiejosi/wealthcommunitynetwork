@@ -47,6 +47,13 @@
                         <tr>
                             <td>
                                 <div class="tm-status-circle moving">
+                                </div>3 days
+                            </td>
+                            <td><b>30%</b></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tm-status-circle moving">
                                 </div>7 days
                             </td>
                             <td><b>50%</b></td>

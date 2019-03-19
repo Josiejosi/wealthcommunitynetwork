@@ -71,6 +71,12 @@
                             </li>
 
                             <li class="nav-item">
+                                <a class="nav-link {{ ( Route::currentRouteName() === "allocate_recommit" ) ? 'active' : '' }}" href="{{ url( '/allocate_recommit' ) }}">
+                                    <i class="fa fa-lock" aria-hidden="true"></i> Recommit Allocation
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a class="nav-link {{ ( Route::currentRouteName() === "member_allocation" ) ? 'active' : '' }}" href="{{ url( '/member_allocation' ) }}">
                                     <i class="fa fa-lock" aria-hidden="true"></i> Member Allocation
                                 </a>

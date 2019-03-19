@@ -21,7 +21,7 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
-                                    <td><a href="#" class="btn btn-sm btn-danger">Block</a></td>
+                                    <td><a href="{{ url( '/block/' ) }}/{{ $user->id }}" class="btn btn-sm btn-danger">Block</a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

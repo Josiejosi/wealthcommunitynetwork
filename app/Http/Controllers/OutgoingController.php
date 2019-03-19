@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Order ;
+
 class OutgoingController extends Controller
 {
     public function __construct() {
@@ -15,7 +17,10 @@ class OutgoingController extends Controller
 
     public function index()  {
 
-        return view( 'outgoing' ) ;
+        $outgoing 								= Order::whereSenderId( auth()->user()->id )->get() ;
 
+        return view( 'outgoing', [
+            'outgoing' 							=> $outgoing,
+        ]) ;
     }
 }

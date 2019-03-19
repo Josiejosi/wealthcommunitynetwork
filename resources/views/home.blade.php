@@ -19,23 +19,15 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h5 class="card-title">Sent</h5>
-                                            <h6 class="card-subtitle mb-2">R 100</h6>
+                                            <h6 class="card-subtitle mb-2">R {{ $outgoing_sum }}</h6>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">Available</h5>
-                                            <h6 class="card-subtitle mb-2">R 100</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Withdrawn</h5>
-                                            <h6 class="card-subtitle mb-2">R 100</h6>
+                                            <h5 class="card-title">Received</h5>
+                                            <h6 class="card-subtitle mb-2">R {{ $incoming_sum }}</h6>
                                         </div>
                                     </div>
                                 </div>

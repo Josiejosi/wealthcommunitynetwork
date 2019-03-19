@@ -21,18 +21,18 @@ class PHController extends Controller {
 
     	// 0 = not allocated, 1 = allocated, 2 = reserved for payment, 3 = payment received.
     	//
-    	$have_pending_order 				= Order::where( 'status', 0 )
-    											->where( 'user_id', auth()->user()->id )
+    	$have_pending_order 				= Order::where( 'user_id', auth()->user()->id ) 
+    											->where( 'status', 0 )
     											->orWhere( 'status', 1 )
     											->orWhere( 'status', 2 )->count() ;
 
 
-    	if ( $have_pending_order > 0 ) {
+/*    	if ( $have_pending_order > 0 ) {
     		
 		    flash( 'You need to complete the pending order before making another 1.' )->warning() ;
 		    return redirect()->back() ;
 
-    	}
+    	}*/
 
     	/**
     	 * get upliner details.
@@ -43,6 +43,7 @@ class PHController extends Controller {
 
     	$percentage 						= 100 ;
 
+        if ( $days == 3 ) $percentage       = 30 ;
     	if ( $days == 7 ) $percentage 		= 50 ;
     	if ( $days == 15 ) $percentage 		= 75 ;
 
@@ -76,7 +77,7 @@ class PHController extends Controller {
 
 	    	flash( 'Please pay your upliner in the next 12 hours.' )->success() ;
 
-    	}
+    	} 
 
     	//$matority_amount 					= $amount + ( $amount * $percentage / 100 ) ;
 
@@ -129,12 +130,12 @@ class PHController extends Controller {
 			        'status' 						=> 0, 
 			        'amount' 						=> $matority_amount, 
 			        'user_id' 						=> $order->sender_id, 
-			        'type' 							=> 1, 
+			        'type' 							=> 2, 
 		    		'days' 							=> $order->days, 
         			'percentage' 					=> $order->percentage, 
 			        'sender_id' 					=> 0, 
-			        'matures_at' 					=> Carbon::now()->addHours( $order->days ), 
-			        'expires_at' 					=> Carbon::now()->addHours( $order->days ),
+			        'matures_at' 					=> Carbon::now()->addDays( $order->days ), 
+			        'expires_at' 					=> Carbon::now()->addDays( $order->days ),
 
 		    	] ;
 

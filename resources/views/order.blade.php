@@ -69,6 +69,7 @@
                                             name="number_of_days" 
                                             value="{{ old('number_of_days') }}" required>
 
+                                        <option value="3">3 days - 30%</option>
                                         <option value="7">7 days - 50%</option>
                                         <option value="15">15 days - 75%</option>
                                         <option value="20">20 days - 100%</option>

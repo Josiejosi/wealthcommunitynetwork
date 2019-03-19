@@ -39,6 +39,10 @@ Route::post('/member_allocation', 'AdminController@member_allocation')->name('po
 Route::get('/users', 'AdminController@users')->name('users') ;
 Route::get('/orders', 'AdminController@orders')->name('orders') ;
 Route::get('/block', 'AdminController@block')->name('block') ;
+Route::get('/allocate_recommit', 'AdminController@allocate_recommit')->name('allocate_recommit') ;
+Route::post('/post_recommit_allocation', 'AdminController@post_recommit_allocation')->name('post_recommit_allocation') ;
+Route::post('/post_member_allocation', 'AdminController@post_member_allocation')->name('post_member_allocation') ;
+Route::get('/block/{user_id}', 'AdminController@block_user')->name('block_user') ;
 
 Route::get('/password', 'PasswordController@index')->name('password') ;
 Route::post('/password', 'PasswordController@update')->name('password') ;

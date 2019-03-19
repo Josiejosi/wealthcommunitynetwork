@@ -5,42 +5,34 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Member Allocations</div>
+                    <div class="card-header">Recommit Allocations</div>
 
                     <div class="card-body">
 
 
                         <div class="row">
                             <div class="col-12 text-center">
-                                <h2 class="tm-block-title mb-4">Allocating Members</h2>
+                                <h2 class="tm-block-title mb-4">Recommit Allocations</h2>
                             </div>
                         </div>
 
-                        <form method="POST" action="{{ route('post_member_allocation') }}">
+                        <form method="POST" action="{{ route('post_recommit_allocation') }}">
                             @csrf
 
                             <div class="form-group row">
-                                <label for="member" class="col-md-4 col-form-label text-md-right">{{ __('Member') }}</label>
+                                <label for="admin" class="col-md-4 col-form-label text-md-right">{{ __('Admin') }}</label>
 
                                 <div class="col-md-6">
                                     <select 
-                                        class="form-control {{ $errors->has('member') ? ' is-invalid' : '' }}" 
-                                        name="member" required autofocus>
-                                        @foreach( $members as $member )
-                                        @foreach( $orders as $order )
-
-                                            <?php
-
-                                                $user = \App\User::find( $order->user_id ) ;
-                                            ?>
-
-                                            <option value="{{ $order->user_id }}">{{ $user->name }} - R {{ $order->amount  }}</option>
-                                        @endforeach
+                                        class="form-control {{ $errors->has('admin') ? ' is-invalid' : '' }}" 
+                                        name="admin" required autofocus>
+                                        @foreach( $admins as $admin )
+                                            <option value="{{ $admin->id }}">{{ $admin->name }}</option>
                                         @endforeach
                                     </select> 
-                                    @if ($errors->has('member'))
+                                    @if ($errors->has('admin'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('member') }}</strong>
+                                            <strong>{{ $errors->first('admin') }}</strong>
                                         </span>
                                     @endif
                                 </div>
@@ -58,7 +50,7 @@
 
                                             <?php
 
-                                                $user = \App\User::find( $order->user_id ) ;
+                                                $user = \App\User::find( $order->sender_id ) ;
                                             ?>
 
                                             <option value="{{ $order->id }}">{{ $user->name }} - R {{ $order->amount  }}</option>
