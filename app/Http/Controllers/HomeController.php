@@ -20,7 +20,7 @@ class HomeController extends Controller
 
     public function index()  {
 
-        $showLink 								= Order::whereSenderId( auth()->user()->id )->whereStatus(3)->where('type', 1)->orWhere('type', 2)->count() ;
+        $showLink 								= Order::whereSenderId( auth()->user()->id )->whereStatus(3)->count() ;
 
         $outgoing 								= Order::whereSenderId( auth()->user()->id )->get() ;
         $incoming 								= Order::whereUserId( auth()->user()->id )->get() ;
